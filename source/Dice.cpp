@@ -1,4 +1,8 @@
-#include "Dice.h"
+// LOW PRIORITY
+
+// Don't forget we have no roll()
+
+#include "header/Dice.h"
 
 std::random_device rd;
 std::mt19937 gen(rd());

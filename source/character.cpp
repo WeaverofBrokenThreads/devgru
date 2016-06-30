@@ -1,4 +1,6 @@
-#include "character.h"
+// MEDIUM PRIORITY
+
+#include "header/character.h"
 
 Character::Character()
 {
@@ -72,5 +74,9 @@ Character::Character()
 
     int ReflexSpeed = BaseRef / std::log((Intelligence * ReflexMod + 2));
     cout << "Reflex Speed: " << ReflexSpeed << " ms" << endl;
+
+    /*
+     * I VERY MUCH DON'T LIKE THIS, BUT IT'S GOOD ENOUGH FOR COMBAT DESIGN
+     */
 
 }
