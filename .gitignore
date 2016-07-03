@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/devgru/devgru.vcxproj.filters
+/devgru/devgru.vcxproj
+/devgru/devgru.sln
+/devgru

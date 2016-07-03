@@ -4,6 +4,20 @@
 
 Character::Character()
 {
+
+	/*
+	
+	STATS POWER LEVEL:
+
+	1 - 2: Untrained, very unskilled, average
+	3: Highest level of average human ability
+	4 - 5: Beyond human power level, faster, smarter, stronger
+	6 - 8: Semi-immortal levels of power
+	9 - 10: Immortal
+	10+: Beyond the Prime Plane AKA 'Planar'.
+	
+	
+	*/
     Strength += rollK(d10, 3);
     Agility += rollK(d10, 3);
     Constitution += rollK(d10, 3);
