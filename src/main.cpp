@@ -17,4 +17,6 @@ int main()
     Character * Jerry = new Character;
     Character * Tom = new Character;
     Combat NewC({Jerry, Tom});
+
+	
 }

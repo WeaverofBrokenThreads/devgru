@@ -6,6 +6,8 @@
 #include <vector>
 #include <string>
 #include "Dice.h"
+#include "Equipment.h"
+
 #include <iostream>
 
 using namespace std;
@@ -27,15 +29,12 @@ public:
     // DERIVED
 
     double MovementSpeed; // Meters per second
-    double Initiative;
+	vector<Equipment> Inventory;
 
-    // FROM EQUIPMENT
+    // Skills
 
-    int Penetration;
-    int Attack;
-    int Defense;
-    int Damage;
-    int Armor;
+    int AttackSkill;
+    int BlockSkill;
 
     // WOUNDS
 

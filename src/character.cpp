@@ -18,11 +18,11 @@ Character::Character()
 	
 	
 	*/
-    Strength += rollK(d10, 3);
-    Agility += rollK(d10, 3);
-    Constitution += rollK(d10, 3);
-    Speed += rollK(d10, 3);
-    Intelligence += rollK(d10, 3);
+    Strength = rollK(std::uniform_int_distribution<int> (1, 4), 3);
+    Agility = rollK(std::uniform_int_distribution<int>(1, 4), 3);
+    Constitution = rollK(std::uniform_int_distribution<int>(1, 4), 3);
+    Speed = rollK(std::uniform_int_distribution<int>(1, 4), 3);
+    Intelligence = rollK(std::uniform_int_distribution<int>(1, 4), 3);
 
 
     /*
@@ -92,5 +92,6 @@ Character::Character()
     /*
      * I VERY MUCH DON'T LIKE THIS, BUT IT'S GOOD ENOUGH FOR COMBAT DESIGN
      */
+
 
 }
