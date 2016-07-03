@@ -1,11 +1,18 @@
 // MEDIUM PRIORITY
 
-#include "header/combat.h"
+#include "combat.h"
 
 Combat::Combat(vector<Character *> Fighter)
 {
 
 }
+
+// Same as Maneuver
+
+struct Technique
+{
+
+};
 
 
 // Stick with struct for now, maybe change to class later.
@@ -27,8 +34,4 @@ struct Maneuver
 
 };
 
-// Same as Maneuver
-struct Technique
-{
 
-};

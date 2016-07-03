@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "header/combat.h"
+#include "combat.h"
 
 using namespace std;
 

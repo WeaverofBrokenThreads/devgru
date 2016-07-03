@@ -1,6 +1,6 @@
 // MEDIUM PRIORITY
 
-#include "header/character.h"
+#include "character.h"
 
 Character::Character()
 {

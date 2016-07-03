@@ -2,7 +2,7 @@
 
 // Don't forget we have no roll()
 
-#include "header/Dice.h"
+#include "Dice.h"
 
 std::random_device rd;
 std::mt19937 gen(rd());
@@ -36,7 +36,7 @@ int rollK(std::uniform_int_distribution<> dX, int times)
     int roll = 0;
     int rollnew = 0;
 
-    for(unsigned int i = 0; i < times; i++)
+    for(int i = 0; i < times; i++)
     {
         rollnew = dX(gen);\
         if(rollnew > roll) roll = rollnew;
