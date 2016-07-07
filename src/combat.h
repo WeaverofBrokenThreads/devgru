@@ -11,11 +11,13 @@ using namespace std;
 class Combat
 {
 public:
-    Combat(vector<Character *> Fighter);
+    Combat(vector<Character *> Fighters);
+
+
 
     // VARS
 
-    vector<Character> Combatants;
+    vector<Character *> Combatants;
 
     int RoundTime;
     int CurrRound;
@@ -24,8 +26,8 @@ public:
     // METHODS
 
     void ResolveRound();
-    void Initiative();
-    void Attack();
+	void Attack(Character * Attacker, Character * Defender);
+	void Initiative();
 };
 
 
@@ -42,7 +44,7 @@ struct Technique
 
 struct Maneuver
 {
-	Maneuver();
+	Maneuver(string _type, float _IM, float _AM, float _DM, float _PT, float _BT, float _MSM, int _AR);
 
 	// VARS
 
@@ -53,6 +55,7 @@ struct Maneuver
 	float PrepareTime;
 	float BaseTime;
 	float MSMod;
+	int AdvantageRequirement;
 	vector<Technique> Techniques;
 
 };

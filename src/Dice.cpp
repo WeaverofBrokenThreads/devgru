@@ -34,13 +34,40 @@ int rollD(std::uniform_int_distribution<> dX, int times, int discard)
 int rollK(std::uniform_int_distribution<> dX, int times)
 {
     int roll = 0;
-    int rollnew = 0;
+    int rollnew;
 
     for(int i = 0; i < times; i++)
     {
-        rollnew = dX(gen);\
+        rollnew = dX(gen);
         if(rollnew > roll) roll = rollnew;
 
     }
     return roll;
+}
+
+
+int roll(std::uniform_int_distribution<> dX, int times)
+{
+	int roll = dX(gen);
+	return roll;
+}
+
+int TNroll(std::uniform_int_distribution<> dX, int times, int TN)
+{
+	std::cout << "Rolling against TN: " << TN << std::endl;
+	std::stringstream rolled;
+	rolled << "Dice Rolled are: ";
+	int successes = 0;
+	for (int i = 0; i < times; i++)
+	{
+		int roll = dX(gen);
+		if (roll >= TN) successes++;
+		if (roll == 10) successes++;
+		rolled << roll;
+		if (i+1 < times) rolled << ", ";
+	}
+	rolled << std::endl << "Total successes: " << successes << " successes!" << std::endl;
+	std::cout << rolled.str(); // Not efficient
+	
+	return successes;
 }

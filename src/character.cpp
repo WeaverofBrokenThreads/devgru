@@ -2,7 +2,7 @@
 
 #include "character.h"
 
-Character::Character()
+Character::Character(Equipment EQ)
 {
 
 	/*
@@ -23,6 +23,14 @@ Character::Character()
     Constitution = rollK(std::uniform_int_distribution<int>(1, 4), 3);
     Speed = rollK(std::uniform_int_distribution<int>(1, 4), 3);
     Intelligence = rollK(std::uniform_int_distribution<int>(1, 4), 3);
+
+	AttackSkill = rollK(std::uniform_int_distribution<int>(1, 5), 3);
+	BlockSkill = rollK(std::uniform_int_distribution<int>(1, 5), 3);
+	DodgeSkill = rollK(std::uniform_int_distribution<int>(1, 5), 3);
+
+	AttackExperience = rollK(std::uniform_int_distribution<int>(1, 15), 3);
+	BlockExperience = rollK(std::uniform_int_distribution<int>(1, 15), 3);
+	DodgeExperience = rollK(std::uniform_int_distribution<int>(1, 15), 3);
 
 
     /*
@@ -93,5 +101,26 @@ Character::Character()
      * I VERY MUCH DON'T LIKE THIS, BUT IT'S GOOD ENOUGH FOR COMBAT DESIGN
      */
 
+	Inventory.push_back(EQ);
+
+	switch(Agility)
+	{
+
+	case 1: SkillMod = 1; break;
+	case 2: SkillMod = 3; break;
+	case 3: SkillMod = 5; break;
+	case 4: SkillMod = 7; break;
+	case 5: SkillMod = 10; break;
+	case 6: SkillMod = 15; break;
+	case 7: SkillMod = 18; break;
+	case 8: SkillMod = 22; break;
+	case 9: SkillMod = 26; break;
+	case 10: SkillMod = 32; break;
+
+	}
+
+	FAttack = AttackSkill * SkillMod + AttackExperience;
+	FBlock = BlockSkill * SkillMod + BlockExperience;
+	FDodge = DodgeSkill * SkillMod + DodgeExperience;
 
 }

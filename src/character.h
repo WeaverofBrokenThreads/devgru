@@ -28,13 +28,28 @@ public:
 
     // DERIVED
 
+	int SkillMod;
+
     double MovementSpeed; // Meters per second
 	vector<Equipment> Inventory;
+
+	int FAttack;
+	int FBlock;
+	int FDodge;
 
     // Skills
 
     int AttackSkill;
     int BlockSkill;
+	int DodgeSkill;
+
+	// Keep it at AttackSkill and DefendSkill and use proficiencies, or do every weapon skill?
+
+	// Experience
+
+	int AttackExperience;
+	int BlockExperience;
+	int DodgeExperience;
 
     // WOUNDS
 
@@ -48,13 +63,11 @@ public:
     int Ruina;
     int Apocalypta;
 
-    // EQUIPMENT
 
-    //vector<Equipment> Inventory;
 
     // METHODS
 
-    Character();
+    Character(Equipment);
 };
 
 #endif // CHARACTER_H

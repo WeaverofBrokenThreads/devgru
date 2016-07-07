@@ -1,3 +1,5 @@
+// MEDIUM PRIORITY
+
 #pragma once
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
@@ -12,7 +14,7 @@ public:
 
 	int Quality;
 	int ATN; // Attack Target Number
-	int PTN; // Parry Target Number
+	int BTN; // Block Target Number
 	float AttackMod;
 	float DefenseMod;
 };

@@ -6,6 +6,8 @@
 #include <random>
 #include <iostream>
 #include <vector>
+#include <sstream>
+#include <algorithm> // for std::sort() later on
 
 static std::uniform_int_distribution<> d10(1, 10);
 static std::uniform_int_distribution<> d20(1, 20);
@@ -16,7 +18,7 @@ static std::uniform_int_distribution<> d100(1, 100);
 int roll(std::uniform_int_distribution<> dX, int times);
 int rollD(std::uniform_int_distribution<> dX, int times, int discard);
 int rollK(std::uniform_int_distribution<> dX, int times);
-int rollVS(std::uniform_int_distribution<> dX, int times, int TN);
+int TNroll(std::uniform_int_distribution<> dX, int times, int TN);
 
 
 #endif // DICE_H
